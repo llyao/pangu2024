@@ -51,3 +51,8 @@
 /Client/Pangu/Logs
 /Client/Pangu/obj
 /Client/Pangu/.vs
+/Client/Pangu/Assembly-CSharp.csproj
+/Client/Pangu/*.csproj
+/Client/Pangu/Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
