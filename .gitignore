@@ -49,3 +49,5 @@
 /Client/Pangu/Unity.Services.Core.Scheduler.csproj
 /Client/Pangu/Unity.Services.Core.Telemetry.csproj
 /Client/Pangu/Logs
+/Client/Pangu/obj
+/Client/Pangu/.vs
