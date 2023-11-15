@@ -26,6 +26,16 @@ namespace Pangu.Foundation
         /// <typeparam name="I"></typeparam>
         /// <returns></returns>
         I Resolve<I>() where I : IModule;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="deltaTime"></param>
+        void Tick(float deltaTime);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="deltaTime"></param>
+        void LateTick(float deltaTime);
     }
 }
 
