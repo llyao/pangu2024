@@ -6,14 +6,13 @@
 // For the full copyright and license information, please view the LICENSE
 // file that was distributed with this source code.
 // -----------------------------------------------------------------------
+using System;
 
 namespace Pangu.Foundation
 {
-    public class Module : IModule
+    public interface IModule : IDisposable 
     {
-        public void Dispose()
-        {
-        }
+        
     }
-
 }
+
