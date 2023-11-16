@@ -7,12 +7,16 @@
 // file that was distributed with this source code.
 // -----------------------------------------------------------------------
 using Pangu.Foundation;
+using UnityEngine;
 
 namespace Pangu.Resource
 {
     public interface IResourceModule : IModule
     {
-        
+        GameObject InitiateAsync(string path);
     }
+
+
+    public class QResourceModule : QI<IResourceModule> { }
 }
 
