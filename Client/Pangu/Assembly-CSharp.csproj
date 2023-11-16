@@ -56,15 +56,25 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Game\Runtime\GameRuntime.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\App\PanguApp.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\Module.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\App\IPanguApp.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModule.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModuleTick.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModuleLateTick.cs" />
-    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\Assembler.cs" />
     <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModuleContainer.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModuleLateTick.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\3rd\SystemResolver\SystemResolver.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\Assembler.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\App\IPanguApp.cs" />
+    <Compile Include="Assets\Code\Game\Runtime\GameRuntime.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModuleTick.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\IModule.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Foundation\QueryModule.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\App\PanguApp.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Log\Log.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Module\Resource\IResourceModule.cs" />
+    <Compile Include="Assets\Code\Pangu\Runtime\Module\Resource\ResourceModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Code\Pangu\Runtime\Module\UI\1.txt" />
+    <None Include="Assets\Code\Pangu\Runtime\Log\1.txt" />
+    <None Include="Assets\Code\Pangu\Runtime\Module\Network\1.txt" />
+    <None Include="Assets\Code\Pangu\Runtime\Module\Resource\1.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -793,6 +803,26 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{BD257508-6287-EBB4-92E3-BF1D1EA0FB58}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="YooAsset.Editor.csproj">
+      <Project>{8181D5F9-FB2D-9937-50AB-44A234CF0A3E}</Project>
+      <Name>YooAsset.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.CacheServer.csproj">
+      <Project>{C9B24D8E-810D-55D0-CC63-32A499700749}</Project>
+      <Name>UnityEditor.CacheServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj">
+      <Project>{0A68DF70-C2C6-038B-49BC-7DFD88E116B2}</Project>
+      <Name>Unity.ScriptableBuildPipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="YooAsset.csproj">
+      <Project>{FF795595-FCAF-1BC5-DCD2-59D4328E7B51}</Project>
+      <Name>YooAsset</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
+      <Project>{973F4A11-2059-0EAB-A66D-912426E5CFEB}</Project>
+      <Name>Unity.ScriptableBuildPipeline.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

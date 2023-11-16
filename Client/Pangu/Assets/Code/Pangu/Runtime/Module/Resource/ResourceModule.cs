@@ -6,13 +6,20 @@
 // For the full copyright and license information, please view the LICENSE
 // file that was distributed with this source code.
 // -----------------------------------------------------------------------
-using Pangu.Foundation;
 
-namespace Pangu.App
+namespace Pangu.Resource
 {
-    public interface IPanguApp : IModule
+    public class ResourceModule : IResourceModule
     {
-    }
+        public void Dispose()
+        {
+        }
 
-    public class QPanguApp : QI<IPanguApp> { }
+        public void OnResolve()
+        {
+        }
+
+    }
 }
+
+
