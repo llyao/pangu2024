@@ -8,6 +8,8 @@
 // -----------------------------------------------------------------------
 
 using Pangu.Foundation;
+using Pangu.Resource;
+using System.Collections;
 using UnityEngine;
 
 namespace Pangu.App
@@ -23,7 +25,17 @@ namespace Pangu.App
         private void Awake()
         {
             _assembler = Assembler.Instance;
-            _assembler.Register<IPanguApp,PanguApp>(true);
+            _assembler
+                .Register<IPanguApp,PanguApp>(true)
+                .Register<IResourceModule, ResourceModule>(true)
+                ;
+            
+
+        }
+
+        public ICoroutine StartCoroutineNew(IEnumerator enumerator)
+        {
+            return new MonoCoroutine(this.StartCoroutine(enumerator));
         }
 
         private void Update()
@@ -32,8 +44,14 @@ namespace Pangu.App
             {
                 _assembler.Tick(Time.deltaTime);
             }
+
+            if (R)
+            {
+                QResourceModule.Instance.InitiateAsync("");
+            }
         }
 
+        public bool R = false;
         private void LateUpdate()
         {
             if (_assembler != null)

@@ -169,6 +169,8 @@ namespace Pangu.Foundation
                         {
                             throw e;
                         }
+
+                        return moduleObject as IModule;
                     }
                 }
             }
