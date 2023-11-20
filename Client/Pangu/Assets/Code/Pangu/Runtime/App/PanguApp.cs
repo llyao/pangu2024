@@ -26,16 +26,14 @@ namespace Pangu.App
         {
             _assembler = Assembler.Instance;
             _assembler
-                .Register<IPanguApp,PanguApp>(true)
+                .Register<IPanguApp, PanguApp>(true)
                 .Register<IResourceModule, ResourceModule>(true)
                 ;
-            
-
         }
 
         public ICoroutine StartCoroutineNew(IEnumerator enumerator)
         {
-            return new MonoCoroutine(this.StartCoroutine(enumerator));
+            return new MonoCoroutine(StartCoroutine(enumerator));
         }
 
         private void Update()
