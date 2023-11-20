@@ -1,8 +1,9 @@
 LoadSceneAsync() 异步加载场景
-    YooAssetsExtension.
-
+    
 
 LoadAssetSync() 同步加载资源对象
+
+
 LoadAssetAsync() 异步加载资源对象
 LoadSubAssetsSync() 同步加载子资源对象
 LoadSubAssetsAsync() 异步加载子资源对象
@@ -10,6 +11,14 @@ LoadAllAssetsSync() 同步加载资源包内所有资源对象
 LoadAllAssetsAsync() 异步加载资源包内所有资源对象
 LoadRawFileSync() 同步获取原生文件
 LoadRawFileAsync() 异步获取原生文件
+
+
+ResourcePackage :
+    public InitializationOperation InitializeAsync(InitializeParameters parameters)
+    {
+        
+
+    }
 
 
 
