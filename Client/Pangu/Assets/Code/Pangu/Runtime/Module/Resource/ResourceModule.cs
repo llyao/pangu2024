@@ -74,9 +74,7 @@ namespace Pangu.Resource
             }
             return _package.LoadAssetAsync<GameObject>("Assets/Loadable/TestA").InstantiateSync();
         }
-
         
-
     }
 }
 

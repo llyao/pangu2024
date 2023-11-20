@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -225,19 +223,5 @@ namespace YooAsset
 		}
 		#endregion
 
-		#region 调试信息
-		internal static DebugReport GetDebugReport()
-		{
-			DebugReport report = new DebugReport();
-			report.FrameCount = Time.frameCount;
-
-			foreach (var package in _packages)
-			{
-				var packageData = package.GetDebugPackageData();
-				report.PackageDatas.Add(packageData);
-			}
-			return report;
-		}
-		#endregion
 	}
 }
