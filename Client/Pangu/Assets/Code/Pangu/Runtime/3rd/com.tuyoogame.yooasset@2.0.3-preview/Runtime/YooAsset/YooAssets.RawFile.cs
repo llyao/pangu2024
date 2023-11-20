@@ -1,25 +1,13 @@
-锘縰sing System;
-using System.Diagnostics;
 
 namespace YooAsset
 {
-	public static partial class YooAssets
-	{
-		private static ResourcePackage _defaultPackage;
-
+    public static partial class YooAssets
+    {
+		#region 原生文件
 		/// <summary>
-		/// 璁剧疆榛樿鐨勮祫婧愬寘
+		/// 同步加载原生文件
 		/// </summary>
-		public static void SetDefaultPackage(ResourcePackage package)
-		{
-			_defaultPackage = package;
-		}
-
-		#region 鍘熺敓鏂囦欢
-		/// <summary>
-		/// 鍚屾鍔犺浇鍘熺敓鏂囦欢
-		/// </summary>
-		/// <param name="assetInfo">璧勬簮淇℃伅</param>
+		/// <param name="assetInfo">资源信息</param>
 		public static RawFileHandle LoadRawFileSync(AssetInfo assetInfo)
 		{
 			DebugCheckDefaultPackageValid();
@@ -27,9 +15,9 @@ namespace YooAsset
 		}
 
 		/// <summary>
-		/// 鍚屾鍔犺浇鍘熺敓鏂囦欢
+		/// 同步加载原生文件
 		/// </summary>
-		/// <param name="location">璧勬簮鐨勫畾浣嶅湴鍧�</param>
+		/// <param name="location">资源的定位地址</param>
 		public static RawFileHandle LoadRawFileSync(string location)
 		{
 			DebugCheckDefaultPackageValid();
@@ -38,9 +26,9 @@ namespace YooAsset
 
 
 		/// <summary>
-		/// 寮傛鍔犺浇鍘熺敓鏂囦欢
+		/// 异步加载原生文件
 		/// </summary>
-		/// <param name="assetInfo">璧勬簮淇℃伅</param>
+		/// <param name="assetInfo">资源信息</param>
 		public static RawFileHandle LoadRawFileAsync(AssetInfo assetInfo, uint priority = 0)
 		{
 			DebugCheckDefaultPackageValid();
@@ -48,16 +36,14 @@ namespace YooAsset
 		}
 
 		/// <summary>
-		/// 寮傛鍔犺浇鍘熺敓鏂囦欢
+		/// 异步加载原生文件
 		/// </summary>
-		/// <param name="location">璧勬簮鐨勫畾浣嶅湴鍧�</param>
+		/// <param name="location">资源的定位地址</param>
 		public static RawFileHandle LoadRawFileAsync(string location, uint priority = 0)
 		{
 			DebugCheckDefaultPackageValid();
 			return _defaultPackage.LoadRawFileAsync(location, priority);
 		}
 		#endregion
-
-		
 	}
 }
